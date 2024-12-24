@@ -200,7 +200,7 @@ letterBtn.forEach((button) => {
 function addBodyPart() {
   let i = 10 - partsLeft;
 
-  hangManContainer.innerHTML += `<img src="/hangman-imgs/${i}.png">`;
+  hangManContainer.innerHTML += `<img src="/main/hangman-imgs/${i}.png">`;
 }
 
 //function to check status of win/lose
@@ -220,8 +220,8 @@ let winLoseStatus = "";
 function win() {
   winLoseStatus = "won";
   hangManContainer.innerHTML = `
-    <img id="happy-man" src="/hangman-imgs/happy.png">
-    <img src="/hangman-imgs/hang-man-stand.png">
+    <img id="happy-man" src="/main/hangman-imgs/happy.png">
+    <img src="/main/hangman-imgs/hang-man-stand.png">
   `;
 
   setTimeout(() => {
@@ -233,7 +233,7 @@ function win() {
     }
 
     setTimeout(() => {
-      hangManContainer.innerHTML += `<img id="thx-bubble" src="/hangman-imgs/speech-bubble-thx.png">`;
+      hangManContainer.innerHTML += `<img id="thx-bubble" src="/main/hangman-imgs/speech-bubble-thx.png">`;
 
       setTimeout(() => {
         let happyMan = document.getElementById("happy-man");
@@ -250,8 +250,8 @@ function win() {
 function lose() {
   winLoseStatus = "lost";
   hangManContainer.innerHTML = `
-    <img id="deadMan" src="/hangman-imgs/full-dead-guy.png">
-    <img src="/hangman-imgs/hang-man-stand.png">`;
+    <img id="deadMan" src="/main/hangman-imgs/full-dead-guy.png">
+    <img src="/main/hangman-imgs/hang-man-stand.png">`;
   let deadMan = document.getElementById("deadMan");
 
   setTimeout(() => {
