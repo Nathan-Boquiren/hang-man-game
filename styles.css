@@ -15,6 +15,8 @@ body {
     flex-direction: column;
 }
 
+/* ===== Starting Screen ===== */
+
 #starting-screen {
     margin-top: 50px;
     display: flex;
@@ -58,7 +60,6 @@ body {
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 3px 0 black;
 }
@@ -69,14 +70,22 @@ body {
 
 #countries:hover {
     background-image: url(button-bg-imgs/countries.png);
+    color: black;
 }
 
 #people:hover {
     background-image: url(button-bg-imgs/people.png);
+    color: white;
 }
 
 #christmas:hover {
     background-image: url(button-bg-imgs/christmas.png);
+    color: white;
+}
+
+#coding:hover {
+    background-image: url(button-bg-imgs/coding.png);
+    color: white;
 }
 
 #category-choices button:active {
@@ -98,6 +107,7 @@ body {
 #start-btn:hover, #restart-btn:hover {
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 5px 0 rgb(0, 0, 0);
+    cursor: pointer;
 }
 
 #start-btn:active, #restart-btn:active {
@@ -105,6 +115,8 @@ body {
     box-shadow: 0 0px 0 rgb(0, 0, 0);
 }
 
+
+/* ===== Main App ===== */
 #app {
     display: none;
     justify-content: center;
@@ -121,6 +133,8 @@ header {
 header h1 {
     font-size: 4rem;
 }
+
+/* === Hangman graphic === */
 
 #hang-man-container {
     align-self: flex-start;
@@ -140,6 +154,8 @@ header h1 {
     transition: all 300ms cubic-bezier(0.25, 1.5, 0.5, 1);
 }
 
+/* === Word blanks container === */
+
 #text-blanks-container {
     margin-left: 50px;
     height: 30vh;
@@ -152,7 +168,73 @@ header h1 {
     font-weight: 600;
 }
 
+/* ===== user manual guess ===== */
+#manual-guess-container {
+    background-color: white;
+    align-self: center;
+    padding: 20px;
+    border-radius: 30px;
+}
 
+.input-container {
+    position: relative;
+    width: 250px;
+    height: 5cqmin;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#manual-guess-input, .input-container label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+#manual-guess-input {
+    transition: none;
+    width: 100%;
+    padding-left: 10px;
+}
+
+#manual-guess-input:focus {
+    outline: 3px solid black;
+}
+
+.input-container label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.input-container label:hover {
+    background-color: lightblue;
+    color: white;
+    font-weight: 600;
+}
+
+.input-container label.clicked {
+    font-size: 1rem;
+    transform: translateX(10%) translateY(-50%);
+    background-color: white;
+    width: 120px;
+    height: 16px;
+}
+
+.input-container label.clicked:hover {
+    color: black;
+    font-weight: 400;
+    cursor: default
+}
+
+/* ===== alphabet buttons ===== */
 
 #alphabet-container {
     display: flex;
@@ -178,7 +260,7 @@ header h1 {
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.507);
 }
 
-
+/* ===== End of game ===== */
 #happy-man {
     transition: all 500ms ease-in;
 }
@@ -204,7 +286,6 @@ header h1 {
 
 #end-screen {
     display: none;
-
     animation: zoomInRebound 300ms cubic-bezier(0.25, 1.5, 0.5, 1) forwards;
     align-items: center;
     justify-content: center;
